@@ -19,7 +19,7 @@ description: >
 # If you want to use the latest Minima version on GitHub Pages, use the following setting and 
 # add a line comment on "theme: minima" above.
 remote_theme: jekyll/minima
-theme : minima/
+theme : minima
 custom_theme: custom
 custom_theme_url: ${{ site.custom_theme }-theme
 
