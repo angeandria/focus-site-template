@@ -1,0 +1,5 @@
+body{
+	background : yellow;
+}
+
+@import "{{ site.custom_theme_url }}/{{ site.custom_theme }}-initialize";

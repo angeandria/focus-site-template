@@ -20,6 +20,9 @@ description: >
 # add a line comment on "theme: minima" above.
 remote_theme: jekyll/minima
 theme : minima/
+custom_theme: custom
+custom_theme_url: {{ site.custom_theme }-theme
+
 
 plugins:
   - jekyll-feed
