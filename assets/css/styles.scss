@@ -1,6 +1,22 @@
 ---
 ---
+// Custom Theme + (Chosen theme OR Default theme)
 
-@import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+/* CUSTOM THEME
+* Load first so custom variables/styles are taken into account
+*
+*/
+@import "{{ site.custom_theme }}";
+
+
+/* CHOSEN THEME (Github Pages theme)
+* https://pages.github.com/themes/
+*/
+//@import "{{ site.theme }}";
+// --------------------------------------------
+
+/* DEFAULT THEME : MINIMA */
+// Uncomment to use Jekyll Default Theme : Minima
+@import "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+ "minima/initialize";
+  
