@@ -20,8 +20,8 @@ description: >
 # add a line comment on "theme: minima" above.
 remote_theme: jekyll/minima
 # theme_alias : minima
-custom_theme: &custom_theme "custom"
-custom_theme_url: "*custom_theme-theme"
+custom_theme_alias: "custom"
+custom_theme_suffix: "-theme"
 
 
 plugins:
