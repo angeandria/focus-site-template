@@ -18,4 +18,4 @@
 
 /* DEFAULT THEME : MINIMA */
 // Uncomment to use Jekyll Default Theme : Minima
-@import "custom-theme/custom", "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";}
+@import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";}
