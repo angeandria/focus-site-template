@@ -1,8 +1,3 @@
-body{
-	background : orange !important;
-}
-
-
 //@import "custom-initialize";
 
-//@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}-initialize";
+@import "{{ site.custom_theme_alias }}-initialize";

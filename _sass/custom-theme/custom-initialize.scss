@@ -4,5 +4,10 @@
 @import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}-styles";
 */
 
+body{
+	background : green !important;
+}
+
+
 @import "custom-theme/custom-variables";
 @import "custom-theme/custom-styles";
