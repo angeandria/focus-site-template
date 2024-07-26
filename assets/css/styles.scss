@@ -6,7 +6,7 @@
 * Load first so custom variables/styles are taken into account
 *
 */
-//@import "custom-theme/custom";
+@import "custom-theme/custom";
 //@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
 
 /* CHOSEN THEME (Github Pages theme)
@@ -17,7 +17,7 @@
 
 /* DEFAULT THEME : MINIMA */
 // Uncomment to use Jekyll Default Theme : Minima
-// @import "custom-theme/custom", "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
+@import "custom-theme/custom", "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
   
 body{
     background: orange;

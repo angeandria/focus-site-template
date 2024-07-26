@@ -27,6 +27,7 @@ custom_theme_suffix: "-theme"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Theme-specific settings
 
