@@ -8,7 +8,7 @@
 *
 */
 
-@import "custom";
+//@import "custom";
 //@import "custom-theme/custom";
 //@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
 
@@ -20,5 +20,5 @@
 
 /* DEFAULT THEME : MINIMA */
 // Uncomment to use Jekyll Default Theme : Minima
-@import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
+@import "custom", minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
 
