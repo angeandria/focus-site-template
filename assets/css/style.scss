@@ -1,5 +1,6 @@
 ---
 ---
+
 // Custom Theme + (Chosen theme OR Default theme)
 
 /* CUSTOM THEME
@@ -20,3 +21,4 @@
 /* DEFAULT THEME : MINIMA */
 // Uncomment to use Jekyll Default Theme : Minima
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
+
