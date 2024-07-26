@@ -1,7 +1,1 @@
-//@import "custom-initialize";
-
-body{
-	background : green !important;
-}
-
-//@import "{{ site.custom_theme_alias }}-initialize";
+@import "custom-initialize";

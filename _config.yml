@@ -22,7 +22,6 @@ remote_theme: jekyll/minima
 theme_alias : minima
 custom_theme_alias: custom
 custom_theme_suffix: "-theme"
-theme_import: "jekyll-theme-#{custom_theme_alias}"
 
 
 plugins:
