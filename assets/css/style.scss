@@ -11,8 +11,10 @@
 // Load first so custom variables/styles are taken into account
 @import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
 
-// ## CUSTOM VARIABLES/STYLES
-@import "custom-variables", "custom-styles";
+// ## CUSTOM VARIABLES
+//@import "custom-variables", "custom-styles";
+
+@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/focus-variables", "custom-variables";
 
 
 // -----------------------------------------------
@@ -26,3 +28,8 @@
 // ## B | DEFAULT THEME : MINIMA
 // Uncomment to use Jekyll Default Theme : Minima
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
+
+
+
+// ## FOCUS/CUSTOM STYLES
+@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/focus-styles", "custom-styles";
