@@ -1,4 +1,8 @@
 //@import "jekyll-theme-custom";
 
-@import "jekyll-theme-{{ site.custom_theme_alias}}";
+body{
+	background : pink;
+}
+
+//@import "jekyll-theme-{{ site.custom_theme_alias}}";
 
