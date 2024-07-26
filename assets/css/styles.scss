@@ -6,7 +6,7 @@
 * Load first so custom variables/styles are taken into account
 *
 */
-//@import "custom-theme/custom";
+@import "custom-theme/custom";
 //@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
 
 /* CHOSEN THEME (Github Pages theme)
