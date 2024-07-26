@@ -6,6 +6,13 @@
 // if parent theme uses !default values, load custom theme BEFORE
 // if not, load custom theme AFTER
 
+/* CUSTOM THEME
+* Load first so custom variables/styles are taken into account
+*
+*/
+//@import "custom-theme/custom";
+@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
+
 
 /* CHOSEN THEME (Github Pages theme)
 * https://pages.github.com/themes/
@@ -17,9 +24,3 @@
 // Uncomment to use Jekyll Default Theme : Minima
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "minima/initialize";
 
-/* CUSTOM THEME
-* Load first so custom variables/styles are taken into account
-*
-*/
-//@import "custom-theme/custom";
-@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
