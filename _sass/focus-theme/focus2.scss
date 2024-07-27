@@ -1,0 +1,34 @@
+---
+---
+
+// ##### (Focus Theme + Custom) + (Chosen theme OR Default theme) #####
+// Note :
+// if parent theme uses !default values, load custom theme BEFORE
+// if not, load custom theme AFTER
+
+ 
+// VARIABLES
+@import "focus-variables";
+@import "../custom-variables";
+
+
+// ------------------
+// PARENT THEME
+// ------------------
+
+// ## A | DEFAULT THEME : MINIMA
+// Uncomment to use Jekyll Default Theme : Minima
+@import "../minima/skins/{{ site.minima.skin | default: 'classic' }}", "../minima/initialize";
+
+
+// ## B | CHOSEN THEME (Github Pages theme)
+// https://pages.github.com/themes/
+//@import "{{ site.theme_alias }}";
+
+
+// -------------
+
+
+// STYLES
+@import "focus-styles";
+@import "../custom-styles";
