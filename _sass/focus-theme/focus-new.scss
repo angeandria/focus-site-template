@@ -6,9 +6,6 @@
 // if parent theme uses !default values, load custom theme BEFORE
 // if not, load custom theme AFTER
 
-body{
-	background: black;
-}
  
 // VARIABLES
 @import "custom-theme/focus-variables";
@@ -35,3 +32,8 @@ body{
 // STYLES
 @import "custom-theme/focus-styles";
 @import "../custom-styles";
+
+
+body{
+	background-color: black !important;
+}
