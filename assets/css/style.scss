@@ -1,10 +1,11 @@
-
+---
+---
 // ------------------
-// FOCU THEME
+// FOCUS THEME
 // ------------------
 
 // ## FOCUS THEME
 // Load first so custom variables/styles are taken into account
-@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}";
+@import "{{ site.custom_theme_alias }}{{ site.custom_theme_suffix }}/{{ site.custom_theme_alias }}-new";
 
-//@import "focus-theme/focus-new";
+//@import "focus-theme/focus";
