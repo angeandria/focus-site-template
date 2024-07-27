@@ -9,7 +9,7 @@
  
 // VARIABLES
 @import "focus-variables";
-@import "../custom-variables";
+//@import "../custom-variables";
 
 
 // ------------------
@@ -18,7 +18,7 @@
 
 // ## A | DEFAULT THEME : MINIMA
 // Uncomment to use Jekyll Default Theme : Minima
-@import "../minima/skins/{{ site.minima.skin | default: 'classic' }}", "../minima/initialize";
+//@import "../minima/skins/{{ site.minima.skin | default: 'classic' }}", "../minima/initialize";
 
 
 // ## B | CHOSEN THEME (Github Pages theme)
@@ -31,7 +31,7 @@
 
 // STYLES
 @import "focus-styles";
-@import "../custom-styles";
+//@import "../custom-styles";
 
 h1, h2, h3{
 	border: 4px solid yellow;
