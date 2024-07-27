@@ -6,7 +6,7 @@
  
 // VARIABLES
 @import "focus-variables";
-//@import "custom-variables";
+@import "../custom-variables";
 
 
 // ------------------
@@ -15,7 +15,7 @@
 
 // ## A | DEFAULT THEME : MINIMA
 // Uncomment to use Jekyll Default Theme : Minima
-@import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "../minima/initialize";
+//@import "minima/skins/{{ site.minima.skin | default: 'classic' }}", "../minima/initialize";
 
 
 // ## B | CHOSEN THEME (Github Pages theme)
