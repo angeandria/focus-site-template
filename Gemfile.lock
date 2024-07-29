@@ -148,6 +148,7 @@ DEPENDENCIES
   html-proofer (~> 5.0)
   jekyll (~> 4.2)
   jekyll-feed
+  jekyll-paginate
   jekyll-remote-theme
   jekyll-theme-chirpy (~> 7.0, >= 7.0.1)
   jekyll-timeago (~> 0.13.1)
