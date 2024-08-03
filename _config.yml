@@ -43,26 +43,25 @@ collections:
 # Apply layouts
 # -----------------
 defaults:
-	-
-		scope:
+	- scope:
 			path: ""
 			type: "posts"
 		values:
-			layout: "post"
+			layout: "post"			
+			author: "Ange Andria"
+			categories: ""
+			tags: ""
+			title: "New post"
 			
-	-
-		scope:
+	- scope:
 			path: ""
 			type: "pages"
 		values:
 			layout: "page"
-			
-  - 
-  		scope:
-			path: ""
-			type: "services"
-			values:
-		layout: "service"
+			author: "Ange Andria"
+			categories: ""
+			tags: ""
+			title: "New page"
 
 			
 # -----------------
