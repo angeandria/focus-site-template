@@ -27,8 +27,20 @@ baseurl: '/'
 permalink: pretty
 
 
+
 # -----------------
-# Defaults
+# Collections
+# -----------------
+collections:
+  services:
+    output: true
+    sort_by: weight
+  pages:
+    output: true
+
+
+# -----------------
+# Apply layouts
 # -----------------
 defaults:
 	-
@@ -45,31 +57,14 @@ defaults:
 		values:
 			layout: "page"
 			
+  - 
+  		scope:
+			path: ""
+			type: "services"
+			values:
+		layout: "service"
 
-# -----------------
-# Collections
-# -----------------
-collections:
-  services:
-    output: true
-    sort_by: weight
-  pages:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-
-
-
+			
 # -----------------
 # Theme
 # -----------------
@@ -94,8 +89,9 @@ plugins:
 
 # If you want to link only specific pages in your header, use this and add the path to the pages
 # in order as they should show up.
-# header_pages:
-#  - about.md
+header_pages:
+	- about.md
+	- newsletter.md
 
 # Set to `true` to show excerpts on the homepage.
 show_excerpts: true
