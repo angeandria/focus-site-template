@@ -44,7 +44,7 @@ collections:
 # Apply layouts
 # -----------------
 defaults:
- -
+  -
    scope:
     path: ""
     type: "posts"
@@ -54,7 +54,7 @@ defaults:
     categories: ""
 	tags: ""
 	title: "New post"			
- -
+  -
    scope:
     path: ""
     type: "pages"
