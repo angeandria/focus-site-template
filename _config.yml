@@ -43,7 +43,8 @@ collections:
 # Apply layouts
 # -----------------
 defaults:
-	- scope:
+  -
+  	scope:
 			path: ""
 			type: "posts"
 		values:
@@ -51,17 +52,17 @@ defaults:
 			author: "Ange Andria"
 			categories: ""
 			tags: ""
-			title: "New post"
-			
-	- scope:
-			path: ""
-			type: "pages"
-		values:
-			layout: "page"
-			author: "Ange Andria"
-			categories: ""
-			tags: ""
-			title: "New page"
+			title: "New post"			
+  -
+	scope:
+		path: ""
+		type: "pages"
+	values:
+		layout: "page"
+		author: "Ange Andria"
+		categories: ""
+		tags: ""
+		title: "New page"
 
 			
 # -----------------
