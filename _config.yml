@@ -45,25 +45,25 @@ collections:
 # -----------------
 defaults:
   -
-   scope:
-    path: ""
-    type: "posts"
-  values:
-    layout: "post"			
-    author: "Ange Andria"
-    categories: ""
-	tags: ""
-	title: "New post"			
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"			
+      author: "Ange Andria"
+      categories: ""
+	  tags: ""
+	  title: "New post"			
   -
-   scope:
-    path: ""
-    type: "pages"
-  values:
-    layout: "page"
-	author: "Ange Andria"
-	categories: ""
-	tags: ""
-	title: "New page"
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+	  author: "Ange Andria"
+	  categories: ""
+	  tags: ""
+	  title: "New page"
 
 			
 # -----------------
