@@ -43,6 +43,7 @@ collections:
 # -----------------
 # Apply layouts
 # -----------------
+# Important : no tabs, spaces only. Multiples of 2.
 defaults:
   -
     scope:
@@ -52,18 +53,18 @@ defaults:
       layout: "post"			
       author: "Ange Andria"
       categories: ""
-	  tags: ""
-	  title: "New post"			
+      tags: ""
+      title: "New post"			
   -
     scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-	  author: "Ange Andria"
-	  categories: ""
-	  tags: ""
-	  title: "New page"
+      author: "Ange Andria"
+      categories: ""
+      tags: ""
+      title: "New page"
 
 			
 # -----------------
