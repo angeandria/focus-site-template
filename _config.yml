@@ -21,7 +21,7 @@ description: >
 # and
 # nav.html
 site_url: https://angeandria.github.io/github-test-site/
-baseurl: '/'
+baseurl: ""
 
 
 permalink: pretty
