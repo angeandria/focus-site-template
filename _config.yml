@@ -26,7 +26,25 @@ baseurl: '/'
 
 permalink: pretty
 
-  
+
+# -----------------
+# Defaults
+# -----------------
+defaults:
+	-
+		scope:
+			path: ""
+			type: "posts"
+		values:
+			layout: "post"
+			
+	-
+		scope:
+			path: ""
+			type: "pages"
+		values:
+			layout: "page"
+			
 
 # -----------------
 # Collections
