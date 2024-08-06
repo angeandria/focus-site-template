@@ -32,12 +32,12 @@ permalink: pretty
 # -----------------
 # Collections
 # -----------------
-collections:
-  services:
-    output: true
-    sort_by: weight
-  pages:
-    output: true
+# collections:
+#   services:
+#     output: true
+#     sort_by: weight
+#   pages:
+#     output: true
 
 
 # -----------------
@@ -78,9 +78,9 @@ custom_theme_suffix: "-theme"
 
 plugins:
   - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-paginate
+  # - jekyll-feed
+  # - jekyll-seo-tag
+  # - jekyll-paginate
 
 
 # -----------------
