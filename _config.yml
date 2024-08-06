@@ -78,9 +78,9 @@ custom_theme_suffix: "-theme"
 
 plugins:
   - jekyll-remote-theme
-  # - jekyll-feed
-  # - jekyll-seo-tag
-  # - jekyll-paginate
+  #- jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
 
 
 # -----------------
