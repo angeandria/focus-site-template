@@ -32,12 +32,12 @@ permalink: pretty
 # -----------------
 # Collections
 # -----------------
-collections:
-  services:
-    output: true
-    sort_by: weight
-  pages:
-    output: true
+# collections:
+#   services:
+#     output: true
+#     sort_by: weight
+#   pages:
+#     output: true
 
 
 # -----------------
