@@ -7,7 +7,7 @@ title: Focus Mind
 author:
   name: GitHub User
   email: your-email@domain.com
-
+  
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
@@ -21,9 +21,8 @@ description: >
 # and
 # nav.html
 site_url: https://angeandria.github.io/github-test-site/
-url: "https://angeandria.github.io/focus-site-template"
 baseurl: ""
-
+url: "https://angeandria.github.io/focus-site-template"
 
 permalink: pretty
 
