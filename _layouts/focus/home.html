@@ -29,6 +29,18 @@ layout: base
 				{{ page.excerpt | markdownify | strip_html | truncate: 20 }}
 			</div>
 		{% endfor %}
+
+
+<hr>
+
+<h2>GUIDES</h2>
+		{% for guide in site.guides %}
+			<div><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a> - {{ guide.url }}</div>
+			<div>
+				{{ guide.excerpt | markdownify | strip_html | truncate: 20 }}
+			</div>
+		{% endfor %}
+
 		
 <hr>
 
