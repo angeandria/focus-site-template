@@ -9,27 +9,43 @@
 
 	{% for item in paths %}
 		
+		<!-- First breadcrumbs item -->
         {% if forloop.first %}
           <span>
+			<!-- Home link --> 
             <a href="{{ '/' | relative_url }}">
-              abc{{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+              {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
             </a>
           </span>
 
+		<!-- Last breadcrumbs item -->
         {% elsif forloop.last %}
-          {% if page.collection == 'tabs' %}
-            <span>def{{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
-          {% else %}
-            <span>ghi{{ page.title }}</span>
-          {% endif %}
+		
+			<!-- Tabs not in use currently -->	
+	        {% if page.collection == 'tabs' %}
+		            <span>def{{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
+					
+			{% else %}
+					<!-- Page title -->			
+		     		<span>{{ page.title }}</span>
+	        
+			{% endif %}
 
+		<!-- Archive page category/tag -->
         {% elsif page.layout == 'category' or page.layout == 'tag' %}
-          <span>jkl
+          <span>
             <a href="{{ item | append: '/' | relative_url }}">
               {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
             </a>
           </span>
+		  
+		<!-- Archive page category/tag -->
+        {% elsif page.layout == 'post' %}
+		
+			<span>{{ page.category }}</span>
+			
         {% endif %}
+		
 	{% endfor %}
 		
 {% endif %}
