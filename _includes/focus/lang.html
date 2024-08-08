@@ -1,10 +1,12 @@
 {% comment %}
   Detect appearance language and return it through variable "lang"
+  Default to lang_default (in most cases 'en') if no locales found.
 {% endcomment %}
+
 {% if site.data.focus.locales[page.lang] %}
   {% assign lang = page.lang %}
 {% elsif site.data.focus.locales[site.lang] %}
   {% assign lang = site.lang %}
 {% else %}
-  {% assign lang = 'en' %}
+  {% assign lang = site.lang_default %}
 {% endif %}

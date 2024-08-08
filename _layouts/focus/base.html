@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
-  {% include focus/lang.html %}
-
-  <body>
-
-    {%- include header.html -%}
+	{% include focus/lang.html %}  
+	{%- include head.html -%}
+	
+	<body>
+	
+	{%- include header.html -%}
 	
 	{% include focus/breadcrumbs.html lang=lang %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-
-  </body>
+	
+	<main class="page-content" aria-label="Content">
+	  <div class="wrapper">
+	    {{ content }}
+	  </div>
+	</main>
+	
+	{%- include footer.html -%}
+	
+	</body>
 
 </html>
