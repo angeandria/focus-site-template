@@ -1,6 +1,5 @@
 ---
 title: Log
-permalink: log
 description: Development log
 ---
 
