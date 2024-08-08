@@ -1,6 +1,6 @@
 ---
 title: Services
-permalink: /services/
+permalink: services
 layout: page
 description: Services
 intro_image: "images/illustrations/reading.svg"
