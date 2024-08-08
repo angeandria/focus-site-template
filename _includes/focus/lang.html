@@ -1,3 +1,6 @@
+# SITE lang {{ site.lang }}
+# PAGE lang {{ page.lang }}
+
 {% comment %}
   Detect appearance language and return it through variable "lang"
 {% endcomment %}
@@ -8,3 +11,5 @@
 {% else %}
   {% assign lang = 'en' %}
 {% endif %}
+
+# DEFINED lang {{ lang }}
