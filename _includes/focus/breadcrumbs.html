@@ -8,7 +8,7 @@
 {% else %}
 
 	{% for item in paths %}
-		
+		{{ item }}
 		<!-- First breadcrumbs item -->
         {% if forloop.first %}
           <span>
@@ -17,6 +17,16 @@
               {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
             </a>
           </span>
+          
+          	<!-- Archive page category/tag -->
+        		{% if page.layout == 'focus/base' %}
+			
+				{% if page.categories.size > 0 %}
+	  {% assign first_category = page.categories[0] %}
+				<span>{{ first_category }}</span>
+				{% endif %}
+				
+	        {% endif %}
 
 		<!-- Last breadcrumbs item -->
         {% elsif forloop.last %}
@@ -39,17 +49,7 @@
             </a>
           </span>
 		  
-		<!-- Archive page category/tag -->
-        {% elsif page.layout == 'focus/base' %}
 		
-			{% if page.categories.size > 0 %}
-  {% assign first_category = page.categories[0] %}
-  First category: {{ first_category }}
-
-			<span>{{ first_category }}</span>
-			{% endif %}
-			
-        {% endif %}
 		
 	{% endfor %}
 		
