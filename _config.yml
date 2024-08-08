@@ -54,7 +54,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "focus/base"			
+      layout: "post"			
       author: "Ange Andria"
       categories: ""
       tags: ""
