@@ -1,14 +1,15 @@
 {% assign paths = page.url | split: '/' %}
 
-{% if paths.size == 0 or page.layout == 'home' %}
+{% if paths.size == 0 or page.layout == 'home' or page.layout == 'focus/home' %}
 
 	<!-- index page -->
 	<span>abc{{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
 
 {% else %}
-    xxx  
-    {% for item in paths %}
-	
+
+	123
+	{% for item in paths %}
+		
         {% if forloop.first %}
           <span>
             <a href="{{ '/' | relative_url }}">
@@ -30,6 +31,8 @@
             </a>
           </span>
         {% endif %}
-      {% endfor %}
-
+	{% endfor %}
+	456
 {% endif %}
+
+breadcrumbs here EOF
