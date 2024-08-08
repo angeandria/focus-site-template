@@ -42,7 +42,12 @@
 		<!-- Archive page category/tag -->
         {% elsif page.layout == 'post' %}
 		
-			<span>{{ page.category }}</span>
+			{% if page.categories.size > 0 %}
+  {% assign first_category = page.categories[0] %}
+  First category: {{ first_category }}
+
+			<span>{{ first_category }}</span>
+			{% endif %}
 			
         {% endif %}
 		
