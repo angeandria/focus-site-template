@@ -83,8 +83,8 @@ defaults:
 # Build settings
 remote_theme: jekyll/minima
 theme_alias : minima
-custom_theme_alias: focus
-custom_theme_suffix: "-theme"
+mytheme_alias: focus
+mytheme_suffix: "-theme"
 
 
 plugins:
