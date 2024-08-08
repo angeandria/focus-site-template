@@ -31,12 +31,12 @@ url: "https://angeandria.github.io/focus-site-template"
 # -----------------
 # Collections
 # -----------------
-# collections:
-#   services:
-#     output: true
-#     sort_by: weight
-#   pages:
-#     output: true
+collections:
+  services:
+    output: true
+    sort_by: weight
+  pages:
+    output: true
 
 
 # -----------------
