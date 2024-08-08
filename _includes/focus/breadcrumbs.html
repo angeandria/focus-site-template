@@ -3,23 +3,22 @@
 {% if paths.size == 0 or page.layout == 'home' or page.layout == 'focus/home' %}
 
 	<!-- index page -->
-	<span>abc{{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
+	<span>{{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
 
 {% else %}
 
-	123
 	{% for item in paths %}
 		
         {% if forloop.first %}
           <span>
             <a href="{{ '/' | relative_url }}">
-              {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+              abc{{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
             </a>
           </span>
 
         {% elsif forloop.last %}
           {% if page.collection == 'tabs' %}
-            <span>{{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
+            <span>def{{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
           {% else %}
             <span>ghi{{ page.title }}</span>
           {% endif %}
@@ -32,7 +31,5 @@
           </span>
         {% endif %}
 	{% endfor %}
-	456
+		
 {% endif %}
-
-breadcrumbs here EOF
