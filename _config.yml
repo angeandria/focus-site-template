@@ -49,7 +49,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"			
+      layout: "focus/base"			
       author: "Ange Andria"
       categories: ""
       tags: ""
@@ -58,7 +58,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "focus/base"
       author: "Ange Andria"
       categories: ""
       tags: ""
