@@ -2,7 +2,7 @@
 
 {% if paths.size == 0 or page.layout == 'home' %}
         <!-- index page -->
-        <span>abc{{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
+        <span>abc{{ site.focus.data.locales['include.lang'].tabs.home | capitalize }}</span>
 
       {% else %}
       
