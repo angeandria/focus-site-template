@@ -1,7 +1,7 @@
 ---
 title: Services
-permalink: services
-layout: services
+permalink: /services
+layout: page
 description: Services
 intro_image: "images/illustrations/reading.svg"
 intro_image_absolute: true

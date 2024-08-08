@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: about
+permalink: /about
 description: This is an about page
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Newsletter
-permalink: newsletter
+permalink: /newsletter
 description: New subscribers
 ---
 newsletter

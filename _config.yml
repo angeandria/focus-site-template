@@ -24,7 +24,7 @@ site_url: https://angeandria.github.io/github-test-site/
 baseurl: ""
 url: "https://angeandria.github.io/focus-site-template"
 
-permalink: pretty
+# permalink: pretty
 
 
 
