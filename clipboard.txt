@@ -1,0 +1,32 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}</link>
+    <description>{{ site.description | xml_escape }}</description>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    {% if site.posts == null or site.posts.size == 0 %}
+      <item>
+        <title>No posts available</title>
+        <link>{{ site.url }}{{ site.baseurl }}</link>
+        <description>No posts available at the moment.</description>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+      </item>
+    {% else %}
+      {% assign sorted_posts = site.posts | sort: 'date' %}
+      {% for post in sorted_posts %}
+        <item>
+          <title>{{ post.title | xml_escape }}</title>
+          <link>{{ site.url }}{{ post.url }}</link>
+          <description>{{ post.excerpt | xml_escape }}</description>
+          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        </item>
+      {% endfor %}
+    {% endif %}
+
+  </channel>
+</rss>
