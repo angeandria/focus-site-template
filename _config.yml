@@ -37,7 +37,9 @@ collections:
     sort_by: weight
   pages:
     output: true
-
+  guides: 
+    output: true
+    sort_by: weight
 
 # -----------------
 # Apply layouts
@@ -61,6 +63,15 @@ defaults:
       layout: "focus/base"
       author: "Ange Andria"
       categories: ""
+      tags: ""
+  -
+    scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "focus/base"
+      author: "Ange Andria"
+      categories: "guide"
       tags: ""
 
 # -----------------
