@@ -23,7 +23,7 @@ BREADCRUMBS
 			  abc
           
 				<!-- Archive page category/tag -->
-        		{% if page.layout == 'focus/post' %}
+        		{% if page.layout == '#{site.mytheme_alias}/post' %}
 					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
