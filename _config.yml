@@ -25,7 +25,7 @@ baseurl: ""
 url: "https://angeandria.github.io/focus-site-template"
 lang: fr-FR
 lang_default: en
-permalink: /article:title
+permalink: /article/:title
 
 
 
