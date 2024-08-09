@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-	{% include focus/lang.html %}  
+	{% include {{ site.mytheme_alias }}/lang.html %}  
 	{%- include head.html -%}
 	
 	<body>
@@ -9,7 +9,7 @@
 	
 	{%- include header.html -%}
 	
-	{% include focus/breadcrumbs.html lang=lang %}
+	{% include {{ site.mytheme_alias }}/breadcrumbs.html lang=lang %}
 	
 	<main class="page-content" aria-label="Content">
 	  <div class="wrapper">

@@ -1,7 +1,7 @@
 {% assign paths = page.url | split: '/' %}
 BREADCRUMBS
 
-{% if paths.size == 0 or page.layout == 'home' or page.layout == 'focus/home' %}
+{% if paths.size == 0 or page.layout == 'home' or page.layout == '{{ site.mytheme_alias }}//home' %}
 
 	<!-- index page -->
 	<span>Index page : {{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
@@ -10,7 +10,7 @@ BREADCRUMBS
 
 	for loop
 	{% for item in paths %}
-		{{ item }}
+		
 		<!-- First breadcrumbs item -->
         {% if forloop.first %}
 	          <span>
@@ -21,7 +21,7 @@ BREADCRUMBS
 	          </span>
           
 				<!-- Archive page category/tag -->
-        		{% if page.layout == 'post' %}
+        		{% if page.layout == '{{ site.mytheme_alias }}/post' %}
 			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
