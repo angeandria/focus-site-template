@@ -1,7 +1,7 @@
 {% assign paths = page.url | split: '/' %}
 BREADCRUMBS
 
-{% if paths.size == 0 or page.layout == 'home' or page.layout == '{{ site.mytheme_alias }}//home' %}
+{% if paths.size == 0 or page.layout == 'home' or page.layout == '#{ site.mytheme_alias }/home' %}
 
 	<!-- index page -->
 	<span>Index page : {{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
@@ -23,7 +23,7 @@ BREADCRUMBS
 			  abc
           
 				<!-- Archive page category/tag -->
-        		{% if page.layout == 'focus/post' %}
+        		{% if page.layout == '#{ site.mytheme_alias }/post' %}
 					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
