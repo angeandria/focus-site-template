@@ -3,10 +3,11 @@
 {% if paths.size == 0 or page.layout == 'home' or page.layout == 'focus/home' %}
 
 	<!-- index page -->
-	<span>{{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
+	<span>Index page : {{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
 
 {% else %}
 
+	for loop
 	{% for item in paths %}
 		{{ item }}
 		<!-- First breadcrumbs item -->
@@ -14,7 +15,7 @@
 	          <span>
 				<!-- Home link --> 
 	            <a href="{{ '/' | relative_url }}">
-	              {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+	              forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
 	            </a>
 	          </span>
           
@@ -23,7 +24,7 @@
 			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
-							<span>{{ first_category }}</span>
+							<span>first category : {{ first_category }}</span>
 					{% endif %}				
 	        	{% endif %}
 		
@@ -32,11 +33,11 @@
 		
 			<!-- Tabs not in use currently -->	
 	        {% if page.collection == 'tabs' %}
-		            <span>def{{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
+		            <span>Tabs : {{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
 					
 			{% else %}
 					<!-- Page title -->			
-		     		<span>{{ page.title }}</span>
+		     		<span>forloop : last{{ page.title }}</span>
 	        
 			{% endif %}
 
@@ -44,7 +45,7 @@
         {% elsif page.layout == 'category' or page.layout == 'tag' %}
           <span>
             <a href="{{ item | append: '/' | relative_url }}">
-              {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
+              Archive page : {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
             </a>
           </span>		  
 		{% endif %}
