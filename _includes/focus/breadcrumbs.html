@@ -19,16 +19,18 @@ BREADCRUMBS
 	              forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
 	            </a>
 	          </span>
+			  
+			  abc
           
 				<!-- Archive page category/tag -->
         		{% if page.layout == '{{ site.mytheme_alias }}/post' %}
-			
+					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
 							<span>first category : {{ first_category }}</span>
 					{% endif %}				
 	        	{% endif %}
-		
+				ghi
 		<!-- Last breadcrumbs item -->
         {% elsif forloop.last %}
 		
