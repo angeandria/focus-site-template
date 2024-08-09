@@ -11,23 +11,22 @@
 		{{ item }}
 		<!-- First breadcrumbs item -->
         {% if forloop.first %}
-          <span>
-			<!-- Home link --> 
-            <a href="{{ '/' | relative_url }}">
-              {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
-            </a>
-          </span>
+	          <span>
+				<!-- Home link --> 
+	            <a href="{{ '/' | relative_url }}">
+	              {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+	            </a>
+	          </span>
           
-          	<!-- Archive page category/tag -->
+				<!-- Archive page category/tag -->
         		{% if page.layout == 'post' %}
 			
-				{% if page.categories.size > 0 %}
-	  {% assign first_category = page.categories[0] %}
-				<span>{{ first_category }}</span>
-				{% endif %}
-				
-	        {% endif %}
-
+					{% if page.categories.size > 0 %}
+						  	{% assign first_category = page.categories[0] %}
+							<span>{{ first_category }}</span>
+					{% endif %}				
+	        	{% endif %}
+		
 		<!-- Last breadcrumbs item -->
         {% elsif forloop.last %}
 		
@@ -47,9 +46,8 @@
             <a href="{{ item | append: '/' | relative_url }}">
               {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
             </a>
-          </span>
-		  
-		
+          </span>		  
+		{% endif %}
 		
 	{% endfor %}
 		
