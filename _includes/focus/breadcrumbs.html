@@ -21,7 +21,9 @@ BREADCRUMBS
 	          </span>
 			           
 				<!-- Archive page category/tag -->
-				{% if page.layout == "#{site.mytheme_alias}/post" %}
+				{% assign layout_to_check = site.mytheme_alias | append: '/post' %}
+				{% if page.layout == layout_to_check %} 
+				
 					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
