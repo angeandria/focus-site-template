@@ -19,16 +19,13 @@ BREADCRUMBS
 	              forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
 	            </a>
 	          </span>
-			  
-			  abc {{site.mytheme_alias}}
-          
+			           
 				<!-- Archive page category/tag -->
-        		<!--  {% if page.layout == 'focus/post' %}-->
 				{% if page.layout == site.mytheme_alias | append: '/post' %}
 					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
-							<span>first category : {{ first_category }}</span>
+							&nbsp;&rsaquo;<span><a href="/categories/{{ first_category | slugify }}/">{{ first_category }}</a></span>
 					{% endif %}				
 	        	{% endif %}
 				ghi
@@ -41,7 +38,7 @@ BREADCRUMBS
 					
 			{% else %}
 					<!-- Page title -->			
-		     		<span>forloop : last{{ page.title }}</span>
+		     		&nbsp&;rsaquo;<span> {{ page.title }}</span>
 	        
 			{% endif %}
 
