@@ -1,58 +1,59 @@
 {% assign paths = page.url | split: '/' %}
 BREADCRUMBS
 
-{% if paths.size == 0 or page.layout == 'home' or page.layout == '#{ site.mytheme_alias }/home' %}
+<nav id="breadcrumbs">
+		{% if paths.size == 0 or page.layout == 'home' or page.layout == '#{ site.mytheme_alias }/home' %}
 
-	<!-- index page -->
-	<span>Index page : {{ site.focus.data.locales[include.lang].tabs.home | capitalize }}</span>
+			<!-- Index page -->
+			<span>Index page : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}</span>
 
-{% else %}
+		{% else %}
 
-	for loop
-	{% for item in paths %}
-		
-		<!-- First breadcrumbs item -->
-        {% if forloop.first %}
-	          <span>
-				<!-- Home link --> 
-	            <a href="{{ '/' | relative_url }}">
-	              forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
-	            </a>
-	          </span>
-			           
-				<!-- Archive page category/tag -->
-				{% assign layout_to_check = site.mytheme_alias | append: '/post' %}
-				{% if page.layout == layout_to_check %} 
+			{% for item in paths %}
 				
-					def			
-					{% if page.categories.size > 0 %}
-						  	{% assign first_category = page.categories[0] %}
-							&nbsp;&rsaquo;<span><a href="/categories/{{ first_category | slugify }}/">{{ first_category }}</a></span>
-					{% endif %}				
-	        	{% endif %}
-				ghi
-		<!-- Last breadcrumbs item -->
-        {% elsif forloop.last %}
-		
-			<!-- Tabs not in use currently -->	
-	        {% if page.collection == 'tabs' %}
-		            <span>Tabs : {{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
+				<!-- First breadcrumbs item -->
+				{% if forloop.first %}
+					<span>
+						<!-- Home link --> 
+						<a href="{{ '/' | relative_url }}">
+						forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+						</a>
+					</span>
+							
+					<!-- Archive page category/tag -->
+					{% assign layout_to_check = site.mytheme_alias | append: '/post' %}
+					{% if page.layout == layout_to_check %} 			
+						{% if page.categories.size > 0 %}
+								{% assign first_category = page.categories[0] %}
+								&nbsp;&rsaquo;<span>
+									<a href="/categories/{{ first_category | slugify }}/">{{ first_category }}</a>
+								</span>
+						{% endif %}				
+					{% endif %}
+				
+				<!-- Last breadcrumbs item -->
+				{% elsif forloop.last %}
+				
+					<!-- Tabs not in use currently -->	
+					{% if page.collection == 'tabs' %}
+							&nbsp&rsaquo;<span>Tabs : {{ site.data.focus.locales[include.lang].tabs[item] | default: page.title }}</span>
+							
+					{% else %}
+							<!-- Page title -->			
+							&nbsp&rsaquo;<span> {{ page.title }}</span>
 					
-			{% else %}
-					<!-- Page title -->			
-		     		&nbsp&rsaquo;<span> {{ page.title }}</span>
-	        
-			{% endif %}
+					{% endif %}
 
-		<!-- Archive page category/tag -->
-        {% elsif page.layout == 'category' or page.layout == 'tag' %}
-          <span>
-            <a href="{{ item | append: '/' | relative_url }}">
-              Archive page : {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
-            </a>
-          </span>		  
+				<!-- Archive page category/tag -->
+				{% elsif page.layout == 'category' or page.layout == 'tag' %}
+				<span>
+					<a href="{{ item | append: '/' | relative_url }}">
+					Archive page : {{- site.data.focus.locales[include.lang].tabs[item] | default: page.title -}}
+					</a>
+				</span>		  
+				{% endif %}
+				
+			{% endfor %}
+				
 		{% endif %}
-		
-	{% endfor %}
-		
-{% endif %}
+</nav>
