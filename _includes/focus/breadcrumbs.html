@@ -1,11 +1,12 @@
+<!-- Breadcrumbs -->
 {% assign paths = page.url | split: '/' %}
-BREADCRUMBS
 
 <nav id="breadcrumbs">
 		{% if paths.size == 0 or page.layout == 'home' or page.layout == '#{ site.mytheme_alias }/home' %}
 
-			<!-- Index page -->
-			<span>Index page : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}</span>
+			<!-- Index page 
+			<span>{{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}</span>
+			-->
 
 		{% else %}
 
@@ -16,7 +17,7 @@ BREADCRUMBS
 					<span>
 						<!-- Home link --> 
 						<a href="{{ '/' | relative_url }}">
-						forloop first : {{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
+						{{- site.data.focus.locales[include.lang].tabs.home | capitalize -}}
 						</a>
 					</span>
 							

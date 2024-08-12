@@ -5,20 +5,20 @@
 	{%- include head.html -%}
 	
 	<body>
-	LAYOUT : {{ page.layout}}
 	
+	<!-- Header -->	
 	{%- include header.html -%}
 	
-	{% include {{ site.mytheme_alias }}/breadcrumbs.html lang=lang %}
-	
+	<!-- Main content -->
 	<main class="page-content" aria-label="Content">
 	  <div class="wrapper">
+		{% include {{ site.mytheme_alias }}/breadcrumbs.html lang=lang %}
 	    {{ content }}
 	  </div>
 	</main>
 	
+	<!-- Footer -->
 	{%- include footer.html -%}
 	
 	</body>
-
 </html>
