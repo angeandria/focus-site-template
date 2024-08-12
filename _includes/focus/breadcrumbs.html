@@ -21,7 +21,7 @@ BREADCRUMBS
 	          </span>
 			           
 				<!-- Archive page category/tag -->
-				{% if page.layout == site.mytheme_alias | append: '/post' %}
+				{% if page.layout == "#{site.mytheme_alias}/post" %}
 					def			
 					{% if page.categories.size > 0 %}
 						  	{% assign first_category = page.categories[0] %}
@@ -38,7 +38,7 @@ BREADCRUMBS
 					
 			{% else %}
 					<!-- Page title -->			
-		     		&nbsp&;rsaquo;<span> {{ page.title }}</span>
+		     		&nbsp&rsaquo;<span> {{ page.title }}</span>
 	        
 			{% endif %}
 
