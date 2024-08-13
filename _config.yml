@@ -109,7 +109,7 @@ defaults:
       author: "Ange Andria"
       categories: ""
       tags: ""
-	  read_time: true
+      read_time: true
   -
     scope:
       path: ""
