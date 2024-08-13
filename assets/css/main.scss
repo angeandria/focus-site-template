@@ -1,0 +1,9 @@
+---
+---
+// ------------------
+// FOCUS THEME
+// ------------------
+
+// ## FOCUS THEME
+// Load first so custom variables/styles are taken into account
+@import "{{ site.mytheme_alias }}{{ site.mytheme_suffix }}/{{ site.mytheme_alias }}";
