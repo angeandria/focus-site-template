@@ -116,7 +116,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: "page"
       author: "Ange Andria"
       categories: ""
       tags: ""
