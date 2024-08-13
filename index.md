@@ -1,5 +1,5 @@
 ---
-layout: focus/home
+layout: home
 ---
 
 Hello world
