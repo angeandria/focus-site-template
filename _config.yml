@@ -94,6 +94,7 @@ collections:
     permalink: /resources/:title
     sort_by: weight
 
+
 # -----------------
 # Apply layouts
 # -----------------
@@ -128,7 +129,7 @@ defaults:
       categories: "guide"
       tags: ""
 
-   
+
 # -----------------
 # Exclude
 # ----------------- 
