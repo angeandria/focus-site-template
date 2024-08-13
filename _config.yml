@@ -1,12 +1,7 @@
-# see jekyll cayman for theme inspiration
-
 # -----------------
 # Site details
 # -----------------
 title: Focus Mind
-author:
-  name: GitHub User
-  email: your-email@domain.com
   
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -15,16 +10,73 @@ description: >
   in _config.yml. It will appear in your document head meta (for Google search
   results) and in your feed.xml site description.
   
-
-# Necessary? use in head.html
-# <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-# and
-# nav.html
-site_url: https://angeandria.github.io/github-test-site/
-baseurl: ""
+# One of the two urls below needs to be deleted later  
+site_url: "https://angeandria.github.io/focus-site-template"
 url: "https://angeandria.github.io/focus-site-template"
+baseurl: ""
 lang: fr-FR
 lang_default: en
+email:
+logo: # path of site logo, e.g. "/assets/images/logo.png"
+
+# -----------------
+# Theme
+# -----------------
+# Build settings
+# remote_theme: jekyll/minima
+remote_theme : mmistakes/jekyll-theme-basically-basic@1.4.5
+theme_alias : minima
+mytheme_alias: "focus"
+mytheme_suffix: "-theme"
+
+# -----------------
+# Plugins
+# -----------------
+plugins:
+  - jekyll-remote-theme
+  #- jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+feed:
+  path: atom.xml
+
+  
+# -----------------
+# Main author
+# -----------------
+author:
+  name: GitHub User
+  email: your-email@domain.com
+  twitter:
+  picture: 
+	  
+	  
+# -----------------
+# Search
+# -----------------
+search: # true, false (default)
+search_full_content: false # true, false (default)
+search_provider: # lunr (default), algolia
+algolia:
+  application_id: # YOUR_APPLICATION_ID
+  index_name: # YOUR_INDEX_NAME
+  search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
+  powered_by: # true (default), false
+
+
+
+# -----------------
+# Pagination
+# -----------------  
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+  
+
+# -----------------
+# Permalinks : Posts
+# -----------------
 permalink: /article/:title
 
 
@@ -54,16 +106,17 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "focus/post"			
+      layout: "post"			
       author: "Ange Andria"
       categories: ""
       tags: ""
+	  read_time: true
   -
     scope:
       path: ""
       type: "pages"
     values:
-      layout: "focus/base"
+      layout: "base"
       author: "Ange Andria"
       categories: ""
       tags: ""
@@ -77,23 +130,43 @@ defaults:
       categories: "guide"
       tags: ""
 
+
+
+  
+  
+  
+  
+  
+ 
 # -----------------
-# Theme
-# -----------------
-# Build settings
-remote_theme: jekyll/minima
-theme_alias : minima
-mytheme_alias: "focus"
-mytheme_suffix: "-theme"
+# Exclude
+# ----------------- 
+# Exclude from processing.
+exclude:
+  - .asset-cache
+  - .bundle
+  - .codeclimate.yml
+  - .editorconfig
+  - .gitattributes
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .scss-lint.yml
+  - CHANGELOG
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - node_modules
+  - Rakefile
+  - README
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - /docs # ignore Basically Basic sample site
+  - /example # ignore Basically Basic dev site
 
-
-plugins:
-  - jekyll-remote-theme
-  #- jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-paginate
-
-
+  
+  
 # -----------------
 # MINIMA Theme
 # -----------------  
