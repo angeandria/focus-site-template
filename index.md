@@ -1,6 +1,9 @@
 ---
-layout: focus/home
+layout: home
 ---
+
+{%- include all-posts.html -%}
+	
 
 Hello world
 

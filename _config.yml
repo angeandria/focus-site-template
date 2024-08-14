@@ -117,7 +117,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "base"
+      layout: "post"
       author: "Ange Andria"
       categories: ""
       tags: ""
@@ -126,7 +126,7 @@ defaults:
       path: ""
       type: "guides"
     values:
-      layout: "focus/base"
+      layout: "default"
       author: "Ange Andria"
       categories: "guide"
       tags: ""
